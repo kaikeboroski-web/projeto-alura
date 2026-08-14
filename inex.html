@@ -1,21 +1,54 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Meus objetivos do ano</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projeto de Vida & Matemática Aplicada</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
-  <body>
-    <section class="conteudo-principal">
-      <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
-      <div class="botoes">
-        <button class="botao">Cursos na Alura</button>
-        <button class="botao">Criar projetos em Javascript</button>
-        <button class="botao">Criar um portfolio</button>
-        <button class="botao">Atualizar meu currículo</button>
-      </div>
+  <header>
+    <h1>Projeto de Vida</h1>
+    <p>Organizando objetivos futuros com Matemática Aplicada</p>
+  </header>
+
+  <main class="container">
+    <section class="card">
+      <h2>Planejador de Metas Futuras</h2>
+      <p>Calcule quanto você precisa guardar por mês para realizar seus sonhos.</p>
+
+      <form id="goal-form">
+        <div class="input-group">
+          <label for="goal-name">Nome do Objetivo:</label>
+          <input type="text" id="goal-name" placeholder="Ex: Faculdade, Viagem, Computador" required>
+        </div>
+
+        <div class="input-group">
+          <label for="target-amount">Valor Total Necessário (R$):</label>
+          <input type="number" id="target-amount" step="0.01" placeholder="Ex: 5000" required>
+        </div>
+
+        <div class="input-group">
+          <label for="time-months">Prazo (em meses):</label>
+          <input type="number" id="time-months" placeholder="Ex: 24" required>
+        </div>
+
+        <div class="input-group">
+          <label for="interest-rate">Rendimento Estimado ao Mês (%):</label>
+          <input type="number" id="interest-rate" step="0.01" placeholder="Ex: 0.5 (opcional)">
+        </div>
+
+        <button type="submit">Calcular Plano</button>
+      </form>
     </section>
-  </body>
+
+    <section class="card result-card hidden" id="result-section">
+      <h2>Plano de Ação</h2>
+      <div id="result-content"></div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
 </html>
